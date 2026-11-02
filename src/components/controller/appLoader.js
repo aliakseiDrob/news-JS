@@ -1,9 +1,12 @@
 import Loader from './loader';
+import { getEnvVariable } from '../../utils/utils';
 
 class AppLoader extends Loader {
     constructor() {
-        super(process.env.API_URL, {
-            apiKey: process.env.API_KEY,
+        const checkedApiUrl = getEnvVariable(process.env.API_URL, 'API Url');
+        const checkedApiKey = getEnvVariable(process.env.API_KEY, 'API Key');
+        super(checkedApiUrl, {
+            apiKey: checkedApiKey,
         });
     }
 }
