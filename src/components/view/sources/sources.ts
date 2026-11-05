@@ -3,7 +3,7 @@ import { cloneElement, getDocumentElement, getElement } from '../../../utils/uti
 import './sources.css';
 
 class Sources {
-    draw(data: Source[]) {
+    draw(data: Source[]): void {
         const fragment = document.createDocumentFragment();
         const sourceItemTemp = getDocumentElement<HTMLTemplateElement>('#sourceItemTemp');
 

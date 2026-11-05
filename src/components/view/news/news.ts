@@ -7,7 +7,7 @@ const maxOnPage = 10;
 const dateLength = 10;
 
 class News {
-    draw(data: NewsData[]) {
+    draw(data: NewsData[]): void {
         const news = data.slice(startIndex, maxOnPage);
 
         const fragment = document.createDocumentFragment();

@@ -11,7 +11,7 @@ class App {
         this.view = new AppView();
     }
 
-    start() {
+    start(): void {
         const sources = getDocumentElement('.sources');
         sources.addEventListener('click', (e) =>
             this.controller.getNews(e, (data: NewsResponce) => this.view.drawNews(data))
